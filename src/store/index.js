@@ -4,7 +4,7 @@ import Vuex from 'vuex';
 import localforage from 'localforage';
 
 localforage.config({
-  name: 'LaoBible',
+  name: 'LaoEGW',
 });
 
 Vue.use(Vuex);
@@ -30,7 +30,7 @@ export default new Vuex.Store({
   },
   actions: {
     async initdata({ commit }) {
-      localforage.getItem('LaoBible').then((localstoragedata) => {
+      localforage.getItem('LaoEGW').then((localstoragedata) => {
         if (localstoragedata != null) {
           const load = async () => ('done');
           load()
@@ -44,10 +44,10 @@ export default new Vuex.Store({
           // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoEGW.json - EGW
           // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoHealthBooks.json - HB
           // https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoSongs.json - LS
-          fetch('https://s3-us-west-2.amazonaws.com/laoadventist-media/LaoBible.json')
+          fetch('https://laoadventist-media.s3-us-west-2.amazonaws.com/LaoEGW.json')
             .then((response) => (response.json()))
             .then(async (responseJSON) => {
-              await localforage.setItem('LaoBible', responseJSON)
+              await localforage.setItem('LaoEGW', responseJSON)
                 .then(commit('LOAD', responseJSON))
                 .then(commit('INSTALLED'));
             })

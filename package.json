@@ -1,6 +1,6 @@
 {
-  "name": "laobible",
-  "version": "1.0.191119",
+  "name": "laoegw",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

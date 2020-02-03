@@ -17,7 +17,7 @@
   <router-view class="view" />
 
   <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Lao Bible Web App</a>
+    <a class="navbar-brand" href="#">Lao Ellen G White Books Web App</a>
     <!-- <a class="navbar-brand" href="#">Lao Bible Studies Web App</a> -->
     <!-- <a class="navbar-brand" href="#">Lao Health Books Web App</a> -->
     <!-- <a class="navbar-brand" href="#">Lao Ellen G White Books Web App</a> -->
@@ -76,7 +76,7 @@ export default {
     },
   },
   mounted() {
-    localforage.getItem('LaoBible').then((value) => {
+    localforage.getItem('LaoEGW').then((value) => {
       if (value === null) {
         this.setMsg('Initial loading... Please wait.');
       }
@@ -102,7 +102,7 @@ LS - Lao Songs - #00695c
  -->
 
 <style lang="scss">
-$primary: #ff9800;
+$primary: #5d4037;
 $secondary: #2962ff;
 $body-bg: #eeeeee;
 $body-color: #212121;

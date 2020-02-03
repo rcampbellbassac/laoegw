@@ -1,6 +1,6 @@
 {
-  "name": "LaoBible",
-  "short_name": "LaoBible",
+  "name": "LaoEGW",
+  "short_name": "LaoEGW",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
@@ -16,5 +16,5 @@
   "start_url": ".",
   "display": "standalone",
   "background_color": "#eeeeee",
-  "theme_color": "#ff9800"
+  "theme_color": "#5d4037"
 }
